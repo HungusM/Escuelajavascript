@@ -1,0 +1,294 @@
+
+  
+
+*{
+   margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    
+  }
+  body{
+    width: 100%;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;    
+    background-color: rgba(0, 28, 128, 0.8);
+    background-image:url(../assets/img/Fondo-azul.png);
+   
+}
+
+/* Header*/
+.header{
+    width: 100%;   
+    height: 100px;
+    position: relative;
+    display: flex;  
+    justify-content: space-between;  
+    align-items:flex-start;  
+    
+   
+}
+
+.header__img {
+    width: 200px;
+    object-fit: contain;   
+    Padding-top: 20px;
+    padding-left: 10px;   
+}
+
+.header__menu {
+    width: 120px;
+    margin-right: 20px; 
+  
+      
+}
+
+
+
+.header__menu div {
+    display: flex; 
+    width:100%;
+   
+    align-items: center;   
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.header__menu div > img {
+     
+    width: 40px;
+    height: 40px;
+    
+}
+.header__menu div > p {
+    
+    text-align: right;
+    color: white;
+    font-family: 'Spartan';
+    font-weight:600;
+
+}
+
+.header__menu ul{
+    
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    display: none;
+    margin: 0px 0px;
+    
+ 
+    
+    
+}
+
+.header__menu:hover ul {
+    
+    display: inline;
+     
+}
+
+.header__menu  li a {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+
+    
+}
+
+.header__menu  li a:hover {
+   
+    text-decoration: underline;
+}
+ 
+ 
+/* Buscador*/
+  .buscador {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding:50px 0px;
+      align-items: center;
+  }
+   .buscador h1 {
+       display: flex;
+       justify-content: center;
+       padding:20px 10px ;
+       color: white;
+       text-align: center;
+       
+   }
+
+   .buscador input {
+
+    border-color: white;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    outline: none;
+    background-color:rgba(0, 28, 128, 0.3); 
+    color: white;
+   }
+   .buscador input::placeholder {
+    
+       font-size:15px;
+   }
+
+/* tercera seccion del carrousel*/
+
+.planes{
+width: 100%;
+height: 450px;
+overflow: hidden;
+padding-top: 30px;
+position: relative;
+
+z-index: 9;
+white-space: nowrap;
+}
+h3 {
+    color: white;
+    font-family: 'Spartan';
+    font-weight:bolder;
+    padding-left: 30px;
+}
+
+
+.planes__carrousel{
+  flex-wrap: nowrap;  
+  padding-bottom: 10px;
+  padding-top: 70px;
+  padding-left: 30px;
+  padding-bottom: 80px;
+
+  
+}
+
+.planes-item{
+    width: 200px;
+    height: 250px;   
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transform-origin: center left;
+    transition: 450ms all;
+    position: relative;
+    z-index: 9;
+    
+    
+}
+.planes-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    
+   
+}
+.planes-item__details {
+
+ font-size: 10px;
+ transition: 450ms opacity;
+ padding: 10px;
+ position: absolute;
+ top: 160px;
+ left: 0;
+ right: 0;
+ bottom:0;
+ opacity: 0;
+ color:white;
+ width: 200px;
+ display:flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.details__icons {
+ display: flex;
+ width: 60px;
+ height: 20px;
+ justify-content: space-between;
+ 
+ 
+
+}
+
+.planes__carrousel:hover  .planes-item__details {
+opacity: 1;
+
+
+transition: 450ms;
+background: linear-gradient( to top, rgba(61, 13, 255, 1)0%, rgba(0, 0, 0, 0)75%);
+}
+.planes-item:hover>.planes-item__details {
+    background: linear-gradient( to top, rgba(12, 13, 232, 1)0%, rgba(0, 0, 0, 0)75%);
+    
+}
+
+
+.planes-item:hover ~ .planes-item {
+transform: translate3d(100px, 0px, 0px);
+
+
+
+
+}
+.planes__carrousel:hover .planes-item {
+    opacity: 0.3;
+}
+.planes__carrousel:hover .planes-item:hover {
+    scale: 1.5;
+    opacity: 1;
+    
+
+    
+}
+.planes__carrousel:hover{
+    overflow: scroll;
+}
+/* footer*/
+.footer {
+    width: 50%;
+    display: flex;  
+    justify-content: space-around;
+    padding-bottom: 20px;
+    
+}
+.footer a {
+    color: white;
+    text-decoration:none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #0df0ff;
+}
+
+@media only screen and (max-width: 470px) {
+
+    .buscador input::placeholder {
+    
+        font-size:11px;
+    }
+   
+   
+
+    .footer {
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        background-color: rgba(0, 28, 128, 1);
+        
+    }
+    .footer a {
+        width: 100%;
+        text-align: left;
+        padding-left: 25px;
+        padding-top: 15px;   
+     }
+}
