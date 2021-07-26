@@ -217,8 +217,6 @@ h3 {
 
 .planes__carrousel:hover  .planes-item__details {
 opacity: 1;
-
-
 transition: 450ms;
 background: linear-gradient( to top, rgba(61, 13, 255, 1)0%, rgba(0, 0, 0, 0)75%);
 }
@@ -273,7 +271,43 @@ transform: translate3d(100px, 0px, 0px);
         font-size:11px;
     }
    
+   // carrousel
    
+    .planes__carrousel:active  .planes-item__details {
+        opacity: 1;
+        transition: 450ms;
+        background: linear-gradient( to top, rgba(61, 13, 255, 1)0%, rgba(0, 0, 0, 0)75%);
+        }
+        .planes-item:active>.planes-item__details {
+            background: linear-gradient( to top, rgba(12, 13, 232, 1)0%, rgba(0, 0, 0, 0)75%);
+            
+        }
+        
+        
+        .planes-item:active ~ .planes-item {
+        transform: translate3d(100px, 0px, 0px);
+        
+        
+        
+        
+        }
+        .planes__carrousel:active .planes-item {
+            opacity: 0.3;
+        }
+        .planes__carrousel:active .planes-item:active {
+            scale: 1.5;
+            opacity: 1;
+            
+        
+            
+        }
+        .planes__carrousel:active{
+            overflow: scroll;
+        }
+    
+    
+    
+    //fin carrousel
 
     .footer {
         width: 100%;
@@ -291,4 +325,11 @@ transform: translate3d(100px, 0px, 0px);
         padding-left: 25px;
         padding-top: 15px;   
      }
+
+     
 }
+
+
+
+
+

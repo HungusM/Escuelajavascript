@@ -9,7 +9,7 @@ body {
   margin: 0px;
   font-family: "Quicksand", sans-serif;
   background-color: rgba(0, 28, 128, 0.8);
-  background-image: url(/assets/img/Fondo-azul.png);
+  background-image: url(../assets/img/Fondo-azul.png);
 }
 
 /* Header*/
@@ -228,6 +228,33 @@ h3 {
 @media only screen and (max-width: 470px) {
   .buscador input::placeholder {
     font-size: 11px;
+  }
+
+  .planes__carrousel:active .planes-item__details {
+    opacity: 1;
+    transition: 450ms;
+    background: linear-gradient(to top, #3d0dff 0%, rgba(0, 0, 0, 0) 75%);
+  }
+
+  .planes-item:active > .planes-item__details {
+    background: linear-gradient(to top, #0c0de8 0%, rgba(0, 0, 0, 0) 75%);
+  }
+
+  .planes-item:active ~ .planes-item {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  .planes__carrousel:active .planes-item {
+    opacity: 0.3;
+  }
+
+  .planes__carrousel:active .planes-item:active {
+    scale: 1.5;
+    opacity: 1;
+  }
+
+  .planes__carrousel:active {
+    overflow: scroll;
   }
 
   .footer {
